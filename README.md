@@ -83,5 +83,5 @@ bar_r.draw(window)
 space = space + 1
 ```
 
-## Contribution
-Professor Diane Mueller 
+## Support
+Zekarias Asaminew, Professor Diane Mueller
