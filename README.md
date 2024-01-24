@@ -1,4 +1,4 @@
-# Dem Vs Rep Gerrymandering Detection
+# Democratic Vs Repuvlican Gerrymandering Detection(2022)
 
 This program analyzes the voting in the state entered by the user for a particular election
 whose data is stored in a file. The program displays voting data from that state by district
