@@ -42,14 +42,14 @@ space = 0
 ```
 
 
-First the file is opened. 
+First, the file is opened. 
 
 ```python
 file = open(FILE_NAME, 'r')
 ```
 
-Then it iterates across te data by splitting it in commas and the first element of the list is the state and the
-following are district, democratic vote, republic vote respectively.
+Then it iterates across the data by splitting it in commas and the first element of the list is the state and the
+following are district, democratic vote, and republic vote respectively.
 
 ```python
 for line in file:
@@ -58,26 +58,26 @@ for line in file:
             state_list = file_list[1:]
 ```
 
-After window is created and bars are calculated for states that have a lot of districts with the formula
+After the window is created bars are calculated for states that have a lot of districts with the formula
 
 ```python
 new_bar_height = ((WINDOW_HEIGHT - SPACE_BETWEEN) - (SPACE_BETWEEN * num_district)) / (num_district)
 ```
 
-Then, gerrymandering is determined by using the diffrence between the two party's vote then the bars are drawn.
+Then, gerrymandering is determined by using the difference between the two party's votes then the bars are drawn.
 
 ```python
 #draw the blue bar (Democrats)
 upperLeft = Point(0, ((space + 1) * SPACE_BETWEEN) + (space * new_bar_height))
 lowerRight = Point(width_democrats, (SPACE_BETWEEN * (space + 1)) + ((space + 1) * new_bar_height))
-bar_d = Rectangle(upperLeft, lowerRight)
+bar_d = Rectangle(upper left, lower right)
 bar_d.setFill('blue')
 bar_d.draw(window)
 
 #draw the red bar (Republicans)
 upperLeft = Point(width_democrats, ((space + 1) * SPACE_BETWEEN) + (space * new_bar_height))
 lowerRight = Point(WINDOW_WIDTH, (SPACE_BETWEEN * (space + 1)) + ((space + 1) * new_bar_height))
-bar_r = Rectangle(upperLeft, lowerRight)
+bar_r = Rectangle(upper left, lower right)
 bar_r.setFill('red')
 bar_r.draw(window)
 space = space + 1
